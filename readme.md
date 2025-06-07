@@ -428,4 +428,12 @@ const styles = StyleSheet.create({
 * **Experiment**: change color hex codes in `theme.js` to craft your own style.
 * **Explore**: add a “Remove all” button, or let users clear their cart.
 
+
+## 6. HOW TO KILL process on spec port
+```ps1
+PS C:\Users\Admin> netstat -ano | findstr :8081
+  TCP    0.0.0.0:8081           0.0.0.0:0              LISTENING       12372
+  TCP    192.168.1.185:8081     192.168.1.182:55950    FIN_WAIT_2      12372
+PS C:\Users\Admin> taskkill /PID 12372 /F
+``` 
 You now have a **complete**, **themed**, **commented** React Native Expo app that uses local state, navigation, and a bit of network magic for images—perfect for a 1-hour lesson! Enjoy teaching and tinkering.
