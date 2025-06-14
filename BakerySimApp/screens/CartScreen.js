@@ -29,7 +29,6 @@ export default function CartScreen({ route }) {
                 .filter(ci => ci.qty > 0);
         });
     }
-
     // simulate pay
     function handlePay() {
         Alert.alert(
@@ -48,7 +47,7 @@ export default function CartScreen({ route }) {
             backgroundColor: darkTheme.colors.background,
         }]}>
             <List.Section>
-                {cartItems.map((ci, idx) => (
+                {cartItems.map((ci, idx ) => (
                     <View key={ci.id} style={styles.row}>
                         <Avatar.Image size={40} source={{ uri: ci.imageUri }} />
                         <View style={styles.info}>
